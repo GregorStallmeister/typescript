@@ -18,14 +18,14 @@ export function printStudent (student: Student): void {
     console.log(highlightLine)
     let gradesString: string = ""
     for(let i= 0; i < student.grades.length - 1; i++) {
-        if (student.grades[i] !== undefined) {
+        if (student.grades[i] !== undefined && student.grades[i] !== null) {
             gradesString += student.grades[i] + ","
         }
         else {
             gradesString += "*,"
         }
     }
-    if (student.grades[student.grades.length - 1] !== undefined)
+    if (student.grades[student.grades.length - 1] !== undefined && student.grades[student.grades.length - 1] !== null)
         gradesString += student.grades[student.grades.length - 1]
     else
         gradesString += "*"

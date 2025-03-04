@@ -166,3 +166,15 @@ printStudent(student3)
 console.log()
 console.log("Now all together:")
 printStudents([student1, student2, student3].reverse())
+
+console.log()
+console.log("student3 as string:")
+console.log(JSON.stringify(student3))
+
+console.log()
+// Caution! While copying the output of the function above IJ masks the " not within the grades array, but eliminates them !!!
+console.log("String " + "{\"firstName\":\"Dörte\",\"lastName\":\"Schulze\",\"age\":16,\"grades\":[1,D,2,A,4,null,2]}" + " as student4:")
+//                                    1         10         20         30         40         50         60   64           64+12
+// const student4: Student = JSON.parse("{\"firstName\":\"Dörte\",\"lastName\":\"Schulze\",\"age\":16,\"grades\":[1,D,2,A,2,3,1]}")
+const student4: Student = JSON.parse('{"firstName":"Dörte","lastName":"Schulze","age":16,"grades":[1,"D",2,"A",4,null,2]}')
+printStudent(student4)
