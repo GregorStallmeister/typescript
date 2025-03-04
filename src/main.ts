@@ -1,4 +1,5 @@
 import './style.css'
+import {printStudent, printStudents, Student} from "./Student.ts";
 // import typescriptLogo from './typescript.svg'
 // import viteLogo from '/vite.svg'
 // import { setupCounter } from './counter.ts'
@@ -39,7 +40,7 @@ else
 let scope: number = 0
 
 if (scope !== 0)
-    console.log("Scope is avaliable.")
+    console.log("Scope is available.")
 else
     console.log("Scope is not available.")
 
@@ -51,7 +52,7 @@ else
 let username: string = ""
 
 if (username.length > 0)
-    console.log("Username is avialable.")
+    console.log("Username is available.")
 else
     console.log("Username is not available.")
 
@@ -67,6 +68,7 @@ if (isAdmin)
 else
     console.log("isAdmin is evaluated to falsy.")
 
+// @ts-ignore
 if (isAdmin === true)
     console.log("isAdmin is true.")
 else
@@ -118,8 +120,8 @@ const sumOfNumbers: number = numbers.reduce(function (previousValue, actualValue
 })
 console.log(sumOfNumbers)
 
-const atleastOneNumberIsGreater: boolean = numbersDoubled.some((actualNumber) => actualNumber > 10)
-console.log(atleastOneNumberIsGreater)
+const atLeastOneNumberIsGreater: boolean = numbersDoubled.some((actualNumber) => actualNumber > 10)
+console.log(atLeastOneNumberIsGreater)
 
 console.log()
 console.log("------------------ Bonus ---------------")
@@ -148,6 +150,19 @@ squaredNumbers.shift()
 
 console.log(squaredNumbers)
 
-// squaredNumbersButDivisibelBy4 : numbers[] = squaredNumbers
+// squaredNumbersButDivisibleBy4 : numbers[] = squaredNumbers
 //     .map((squaredNumber) => { return squaredNumber % 4 > 0 ? squaredNumber: null})
 // console.log(squaredNumbers)
+
+const student1: Student = {firstName: "Anton", lastName: "Meier", age: 17, grades: [1, 4, 2, 2, 2, 3, 1]}
+printStudent(student1)
+
+const student2: Student = {firstName: "Berta", lastName: "Müller", age: 16, grades: ["A",2,"F",3,1,"B",2,5]}
+printStudent(student2)
+
+const student3: Student = {firstName: "Cäsar", lastName: "Schmidt", age: 18, grades: ["A",2,undefined,3,1,"B",undefined,5]}
+printStudent(student3)
+
+console.log()
+console.log("Now all together:")
+printStudents([student1, student2, student3].reverse())
