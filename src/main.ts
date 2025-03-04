@@ -27,7 +27,7 @@ console.log("Hello World!")
 
 let age: number = 24
 
-for (let i=1; i<=age; i++) {
+for (let i = 1; i <= age; i++) {
     console.log(i)
 }
 
@@ -43,7 +43,7 @@ if (scope !== 0)
 else
     console.log("Scope is not available.")
 
-if(scope)
+if (scope)
     console.log("Scope is evaluated as truthy.")
 else
     console.log("Scope is evaluated as falsy.")
@@ -55,7 +55,7 @@ if (username.length > 0)
 else
     console.log("Username is not available.")
 
-if (! username)
+if (!username)
     console.log("Username is evaluated as falsy.")
 else
     console.log("Username is evaluated as truthy.")
@@ -74,10 +74,10 @@ else
 
 let endValue: number = 5
 
-for (let i= 0; i < endValue; i++) {
+for (let i = 0; i < endValue; i++) {
     let row: string = ""
 
-    for(let j = 0; j < endValue - i; j++)
+    for (let j = 0; j < endValue - i; j++)
         row = row + " "
 
     for (let k = 0; k < i; k++)
@@ -91,7 +91,7 @@ for (let i= 0; i < endValue; i++) {
 for (let i = 0; i < endValue; i++) {
     let row: string = ""
 
-    for(let j = 0; j < endValue; j++)
+    for (let j = 0; j < endValue; j++)
         row = row + " "
 
     row = row + "*"
@@ -113,8 +113,41 @@ console.log(words)
 const wordsLongerThan5Letters: string[] = words.filter(word => word.length > 5)
 console.log(wordsLongerThan5Letters)
 
-const sumOfNumbers : number = numbers.reduce(function (previousValue, actualValue){return previousValue + actualValue})
+const sumOfNumbers: number = numbers.reduce(function (previousValue, actualValue) {
+    return previousValue + actualValue
+})
 console.log(sumOfNumbers)
 
- const atleastOneNumberIsGreater: boolean = numbersDoubled.some((actualNumber) => actualNumber > 10)
+const atleastOneNumberIsGreater: boolean = numbersDoubled.some((actualNumber) => actualNumber > 10)
 console.log(atleastOneNumberIsGreater)
+
+console.log()
+console.log("------------------ Bonus ---------------")
+console.log()
+
+const list = [15, 6, 3213, 9, 0, 12, 8464, 1, 1264, 481, 186, 1031, 194]
+console.log(list)
+
+const listSortedDescending: number[] = list
+    .sort(function (a, b) {
+        return a - b
+    })
+    .reverse()
+console.log(listSortedDescending)
+
+const squaredNumbers: number [] = listSortedDescending
+    .map((element) => element * element)
+console.log(squaredNumbers)
+
+squaredNumbers.pop()
+squaredNumbers.pop()
+squaredNumbers.shift()
+squaredNumbers.shift()
+squaredNumbers.shift()
+squaredNumbers.shift()
+
+console.log(squaredNumbers)
+
+// squaredNumbersButDivisibelBy4 : numbers[] = squaredNumbers
+//     .map((squaredNumber) => { return squaredNumber % 4 > 0 ? squaredNumber: null})
+// console.log(squaredNumbers)
