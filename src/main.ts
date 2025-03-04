@@ -99,5 +99,22 @@ for (let i = 0; i < endValue; i++) {
     console.log(row)
 }
 
+console.log("----------------------------------------------------------------")
 
+const numbers: number[] = [1, 2, 3, 4, 5, 6]
+console.log(numbers)
 
+const numbersDoubled: number[] = numbers.map(element => element * 2)
+console.log(numbersDoubled)
+
+const words: string[] = ["Max", "Moritz", "Fritzchen", "Susi", "Hermeline"]
+console.log(words)
+
+const wordsLongerThan5Letters: string[] = words.filter(word => word.length > 5)
+console.log(wordsLongerThan5Letters)
+
+const sumOfNumbers : number = numbers.reduce(function (previousValue, actualValue){return previousValue + actualValue})
+console.log(sumOfNumbers)
+
+ const atleastOneNumberIsGreater: boolean = numbersDoubled.some((actualNumber) => actualNumber > 10)
+console.log(atleastOneNumberIsGreater)
