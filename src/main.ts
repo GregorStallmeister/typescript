@@ -69,7 +69,7 @@ else
     console.log("isAdmin is evaluated to falsy.")
 
 // @ts-ignore
-if (isAdmin === true)
+if (isAdmin === true)  // Yes, I know: It can be simplified. But this is for practice.
     console.log("isAdmin is true.")
 else
     console.log("isAdmin is false")
